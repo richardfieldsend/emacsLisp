@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: " "
+;; Time-stamp: "2017-10-30 17:35:41 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -30,3 +30,57 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq visible-bell t)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Dynamic abbreviation functionality:
+;;
+;; Minimise typing in Emacs. This uses two approaches.
+;;
+;; dabbrev: no need to configure (dynamic abbreviation). To repeat a
+;; phrase already typed start typing the new item then type M-/
+;; (alt-/) and Emacs will expand with the most recent entry. Repeat
+;; the M-/ to go back through the matches.
+;;
+;; abbreviation mode - add entries to a file which will expand
+;; automatically. Abbreviations can be global or mode based.
+;;
+;; To configure an automatically expanding abbreviation you enter the
+;; text you want to expand. Then type C-x a g to trigger the global
+;; add. To add multiple worded abbreviations type C-u <no> C-x a g
+;; where <no> is the number of words that the abbreviation will expand
+;; to. Then type the abbreviated form.
+;;
+;; To add mode based abbreviations C-x a l.
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq-default abbrev-mode t)
+(setq abbrev-file-name "~/emacsLisp/abbrev_defs") ; where
+					; abbreviations are stored.
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Turn on global line numbering
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(global-linum-mode t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Turn on word wrap for specific modes
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-hook 'text-mode-hook 'auto-fill-mode) ; text mode word wrap
+(add-hook 'emacs-lisp-mode-hook 'auto-fill-mode) ; list mode word wrap
+(add-hook 'LaTeX-mode-hook 'auto-fill-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Backing up files each time a file is saved - but crop the number of
+;; files  if it gets too high.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq make-backup-files t		; make backups
+      backup-by-copying t		; don't clobber files
+      version-control t			; number the backups
+      delete-old-versions t		; remove excessive files
+      kept-old-versions 10		; see link to info about this
+      kept-new-versions 2		; https://www.gnu.org/software/emacs/manual/html_node/emacs/Backup-Deletion.html
+      auto-save-default t		; auto-save buffers
+      auto-save-timeout 30		; delay till the save (time in seconds)
+      auto-save-interval 100		; delay till the save
+					; (keystrokes)
+      vc-make-backup-files t		;
+      )
