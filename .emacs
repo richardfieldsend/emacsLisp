@@ -13,3 +13,13 @@
 ;; Split out Emacs Initialisation Files for various purposes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load "emacsVersionControl")		; Magit setup
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Add Emacs Experimental Functionality.
+;;
+;; Content in this file should be moved into suitable sub-files as
+;; they prove their worth.
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load "emacsExperimental")		; Experimental initialisation
+					; functions. 
