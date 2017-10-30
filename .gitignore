@@ -6,6 +6,7 @@
 
 # Backup files
 *~
+.gitignore
 
 # Undo-tree save-files
 *.~undo-tree
