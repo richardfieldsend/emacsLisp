@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; emacsAppearance.el: Look and feel settings for Emacs
 ;;
-;; Time-stamp: "2017-10-31 00:21:33 rf343"
+;; Time-stamp: "2017-10-31 10:09:54 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Initial appearance configuration - inspired by Emacs striptease
@@ -16,9 +16,11 @@
 ;; ziggy-latitude
 (if (string= system-name "ziggy-latitude")
     (setq initial-scratch-message
-	  "I use Emacs, which might be thought of as a thermonuclear
-word processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the
-Command Line"))
+	  "I use Emacs, which might be thought of as a thermonuclear word processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
+(if (string= system-name "psychol-ford")
+    (setq initial-scratch-message
+	  "'Space,' it says, 'is big. Really big. You just won't bealieve how vastly, hugely, mindbogglingly big it is.\nI mean, you may think it's a long way down the road to the chemist, but that's just peanuts to space.'\n\nHitch Hikers Guide To The Galaxy\n\tDouglas Adams."))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual configuration
