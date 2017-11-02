@@ -2,7 +2,7 @@
 ;;
 ;; Emacs Initialisation from scratch.
 ;;
-;; Time-stamp: "2017-10-31 10:19:46 richard"
+;; Time-stamp: "2017-11-02 20:46:04 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set the location for initialisation files
@@ -16,6 +16,7 @@
 (load "emacsAppearance")		; Appearance setup
 (load "emacsFileHandling")		; File handling setup
 (load "emacsProgramming")		; Programming settings
+(load "emacsWriting")			; writing stuff
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add Emacs Experimental Functionality.
