@@ -2,7 +2,7 @@
 ;; emacsLatex.el: Initialisation file for adding LaTeX functionality
 ;; to Emacs using AucTeX.
 ;;
-;; Time-stamp: "2017-11-05 23:56:56 rf343"
+;; Time-stamp: "2017-11-07 01:03:47 rf343"
 ;;
 ;; All things LaTeX and associated.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -17,7 +17,9 @@
 ;; then you need the second line below to get the labels suggested.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'reftex)
-(setq reftex-plug-into-AUCTex t)
+(setq reftex-plug-into-AUCTeX t)		; Correct Case (that is
+										; AUCTeX) is required to make
+										; label creation automatic.
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Switch on auto-save for LaTeX documents.
