@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  emacsProgramming.el: Make programming easier and better.
 ;;
-;; Time-stamp: "2017-10-31 10:26:27 richard"
+;; Time-stamp: "2017-11-07 01:15:12 rf343"
 ;;
 ;; Emacs provides support for all manner of programming languages, so
 ;;  this file could get quite lengthy, and may need splitting out
@@ -31,3 +31,20 @@
 	     (c-toggle-hungry-state 1)))
 ;(require 'autopair)
 ;(setq autopair-autowrap t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Python programming environment: Initially looking at the page here:
+;;
+;; https://realpython.com/blog/python/emacs-the-best-python-editor/
+;;
+;; 1. Install elpy from source (elpy, the Emacs Python environment, is
+;; available on github). Also requires a number of Python packages
+;; installed via pip (see the readme)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'package)
+(add-to-list 'package-archives
+             '("elpy" . "http://jorgenschaefer.github.io/packages/"))
+(package-initialize)
+(elpy-enable)
+
+
