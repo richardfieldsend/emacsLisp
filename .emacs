@@ -2,7 +2,7 @@
 ;;
 ;; Emacs Initialisation from scratch.
 ;;
-;; Time-stamp: "2017-11-08 21:08:08 rf343"
+;; Time-stamp: "2017-11-08 22:55:48 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set the location for initialisation files
@@ -39,6 +39,8 @@
 	(popup xkcd writeroom-mode unbound private-diary palimpsest material-theme magit lorem-ipsum elpy ecb color-theme bbdb autopair auctex-latexmk 2048-game)))
  '(reftex-insert-label-flags (quote (t t)))
  '(remember-data-directory "~/Dropbox/remember")
+ '(remember-data-file "~/Dropbox/remember/notes")
+ '(remember-mode-hook (quote (flyspell-mode turn-on-auto-fill)))
  '(tramp-syntax (quote default) nil (tramp)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
