@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; emacsAppearance.el: Look and feel settings for Emacs
 ;;
-;; Time-stamp: "2017-10-31 10:09:54 richard"
+;; Time-stamp: "2017-11-08 16:32:03 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Initial appearance configuration - inspired by Emacs striptease
@@ -19,7 +19,7 @@
 	  "I use Emacs, which might be thought of as a thermonuclear word processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
 (if (string= system-name "psychol-ford")
     (setq initial-scratch-message
-	  "'Space,' it says, 'is big. Really big. You just won't bealieve how vastly, hugely, mindbogglingly big it is.\nI mean, you may think it's a long way down the road to the chemist, but that's just peanuts to space.'\n\nHitch Hikers Guide To The Galaxy\n\tDouglas Adams."))
+	  "'Space,' it says, 'is big. Really big. You just won't believe how vastly, hugely, mindbogglingly big it is.\nI mean, you may think it's a long way down the road to the chemist, but that's just peanuts to space.'\n\nHitch Hikers Guide To The Galaxy\n\tDouglas Adams."))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -33,8 +33,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Activate a colour theme
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'load-path "~/emacsExtRepos/color-theme/")
-(require 'color-theme)
-(setq color-theme-is-global t)
-(color-theme-initialize)
-(color-theme-pok-wog)
+;; (add-to-list 'load-path "~/emacsExtRepos/color-theme/")
+;; (require 'color-theme)
+;; (setq color-theme-is-global t)
+;; (color-theme-initialize)
+;; (color-theme-pok-wog)
+(add-to-list 'load-path "~/emacsExtRepos/emacs-material-theme")
+(require 'material-theme)
+(load-theme 'material t)

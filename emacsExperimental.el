@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2017-10-30 17:47:13 richard"
+;; Time-stamp: "2017-11-08 17:02:16 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -90,3 +90,25 @@
 (add-to-list 'load-path "~/emacsExtRepo/auctex")
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Use UTF-8 everywhere in Emacs. You know you want to!
+;;
+;; As outlined on this page:
+;;
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq locale-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(when (display-graphic-p)
+   (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Minimap mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/minimap")
+(require 'minimap)
