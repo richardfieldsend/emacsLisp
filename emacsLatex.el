@@ -2,11 +2,11 @@
 ;; emacsLatex.el: Initialisation file for adding LaTeX functionality
 ;; to Emacs using AucTeX.
 ;;
-;; Time-stamp: "2017-11-07 01:03:47 rf343"
+;; Time-stamp: "2017-11-08 20:43:01 rf343"
 ;;
 ;; All things LaTeX and associated.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; LaTeX
+;; Set load path to include AUCTeX and load it to support LaTeX
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepo/auctex")
 (load "auctex.el" nil t t)
