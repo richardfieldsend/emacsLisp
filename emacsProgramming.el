@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  emacsProgramming.el: Make programming easier and better.
 ;;
-;; Time-stamp: "2017-11-07 01:15:12 rf343"
+;; Time-stamp: "2017-11-10 20:24:23 rf343"
 ;;
 ;; Emacs provides support for all manner of programming languages, so
 ;;  this file could get quite lengthy, and may need splitting out
@@ -41,10 +41,8 @@
 ;; available on github). Also requires a number of Python packages
 ;; installed via pip (see the readme)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'package)
-(add-to-list 'package-archives
-             '("elpy" . "http://jorgenschaefer.github.io/packages/"))
-(package-initialize)
-(elpy-enable)
-
-
+;(require 'package)
+;(add-to-list 'package-archives
+;             '("elpy" . "http://jorgenschaefer.github.io/packages/"))
+;(package-initialize)
+;(elpy-enable)
