@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2017-11-12 00:02:17 rf343"
+;; Time-stamp: "2017-11-14 16:01:54 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -108,3 +108,6 @@
 (require 'parsebib)
 (add-to-list 'load-path "~/emacsExtRepos/ebib")
 (require 'ebib)
+
+(package-initialize)
+(elpy-enable)
