@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  emacsProgramming.el: Make programming easier and better.
 ;;
-;; Time-stamp: "2017-11-10 20:24:23 rf343"
+;; Time-stamp: "2017-11-15 14:19:18 richard"
 ;;
 ;; Emacs provides support for all manner of programming languages, so
 ;;  this file could get quite lengthy, and may need splitting out
@@ -35,14 +35,28 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Python programming environment: Initially looking at the page here:
 ;;
+;; Following instructions here:
 ;; https://realpython.com/blog/python/emacs-the-best-python-editor/
 ;;
-;; 1. Install elpy from source (elpy, the Emacs Python environment, is
-;; available on github). Also requires a number of Python packages
-;; installed via pip (see the readme)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;(require 'package)
-;(add-to-list 'package-archives
-;             '("elpy" . "http://jorgenschaefer.github.io/packages/"))
-;(package-initialize)
-;(elpy-enable)
+(package-initialize)
+(elpy-enable)
+;; Activate pep8 corrections when file is saved
+(add-to-list 'load-path "~/emacsExtRepos/py-autopep8/")
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+;; Activate flycheck which may be better than flymake?
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Notes on Python Mode: I have enabled elpy to manage Python
+;; programming.  This provides support for pep8 which appears to be a
+;; readability standard for Python which will modify the layout of
+;; code if it doesn't match the standard (py-autopep8).  The code also
+;; gets checked on the fly to spot issues with it.  On my work machine
+;; it throws an error regarding locale issues (I assume this is
+;; related to the issue that gets thrown up on the screensaver).  I
+;; haven't really used this mode 'in anger', but it does some nice
+;; stuff with auto-completion.
