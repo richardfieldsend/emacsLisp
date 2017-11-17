@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2017-11-15 15:11:24 richard"
+;; Time-stamp: "2017-11-17 01:19:28 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -112,6 +112,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Very silly - but this is NyanCat mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'load-path "~/emacsExtRepos/nyan-mode")
-(require 'nyan-mode)
-(nyan-mode)
+;; (add-to-list 'load-path "~/emacsExtRepos/nyan-mode")
+;; (require 'nyan-mode)
+;; (nyan-mode)

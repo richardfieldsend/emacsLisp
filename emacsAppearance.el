@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; emacsAppearance.el: Look and feel settings for Emacs
 ;;
-;; Time-stamp: "2017-11-11 00:19:46 rf343"
+;; Time-stamp: "2017-11-17 00:56:24 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Initial appearance configuration - inspired by Emacs striptease
