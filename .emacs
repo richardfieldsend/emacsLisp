@@ -2,7 +2,7 @@
 ;;
 ;; Emacs Initialisation from scratch.
 ;;
-;; Time-stamp: "2017-11-17 00:35:48 rf343"
+;; Time-stamp: "2017-12-06 12:11:24 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set the location for initialisation files
@@ -36,6 +36,12 @@
  ;; If there is more than one, they won't work right.
  '(ebib-autogenerate-keys t)
  '(ebib-bib-search-dirs (quote ("~" "~/bibliography/" "~/LaTeX/")))
+ '(ebib-default-entry-type "Book")
+ '(ebib-keywords-field-keep-sorted t)
+ '(ebib-keywords-file "~/bibliography/ebib-keywords.txt")
+ '(ebib-keywords-list (quote ("epub" "humble bundle")))
+ '(ebib-reading-list-file "my-toread-list.txt")
+ '(ebib-use-timestamp t)
  '(package-selected-packages
    (quote
 	(popup xkcd writeroom-mode unbound private-diary palimpsest material-theme magit lorem-ipsum elpy ecb color-theme bbdb autopair auctex-latexmk 2048-game)))

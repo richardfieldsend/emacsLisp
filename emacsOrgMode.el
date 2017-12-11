@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; OrgMode Initialisation File: Install and enable OrgMode.
 ;;
-;; Time-stamp: "2017-11-08 16:44:47 richard"
+;; Time-stamp: "2017-12-11 16:45:44 richard"
 ;;
 ;; Installed OrgMode within the emacsExtRepos folder following
 ;; instructions here: http://orgmode.org/manual/Installation.html
@@ -23,6 +23,7 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+(setq org-log-done t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Insert fancy bullets
