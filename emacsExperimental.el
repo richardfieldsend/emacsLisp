@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2017-11-17 01:19:28 rf343"
+;; Time-stamp: "2017-11-28 17:32:21 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -110,8 +110,37 @@
 (require 'ebib)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Remember - from repository
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/remember")
+
+(require 'remember)
+(setq remember-annotation-functions '(org-remember-annotation))
+(setq remember-handler-functions '(org-remember-handler))
+(add-hook 'remember-mode-hook 'org-remember-apply-template)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Very silly - but this is NyanCat mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; (add-to-list 'load-path "~/emacsExtRepos/nyan-mode")
 ;; (require 'nyan-mode)
 ;; (nyan-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; org remember settings
+;; as outlined in this page:
+;; http://members.optusnet.com.au/~charles57/GTD/remember.html#sec-3
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (setq org-directory "~/Dropbox/orgfiles/")
+;; (setq org-default-notes-file "~/Dropbox/.orgnotes")
+;; (setq remember-annotation-functions '(org-remember-annotation))
+;; (setq remember-handler-functions '(org-remember-handler))
+;; (add-hook 'remember-mode-hook 'org-remember-apply-template)
+;; (define-key global-map "\C-cr" 'org-remember)
+
+;; (setq org-remember-templates
+;;      '(("Todo" ?t "* TODO %? %^g\n %i\n " "~/Dropbox/orgfiles/newgtd.org" "Office")
+;;       ("Journal" ?j "\n* %^{topic} %T \n%i%?\n" "~/Dropbox/orgfiles/journal.org")
+;;       ("Book" ?b "\n* %^{Book Title} %t :READING: \n%[l:/booktemp.txt]\n"
+;;               "~/Dropbox/orgfiles/journal2.org")))
