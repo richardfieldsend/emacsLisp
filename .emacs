@@ -2,7 +2,7 @@
 ;;
 ;; Emacs Initialisation from scratch.
 ;;
-;; Time-stamp: "2017-11-17 00:35:48 rf343"
+;; Time-stamp: "2017-12-02 16:33:40 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set the location for initialisation files
@@ -35,7 +35,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ebib-autogenerate-keys t)
- '(ebib-bib-search-dirs (quote ("~" "~/bibliography/" "~/LaTeX/")))
+ '(ebib-bib-search-dirs (quote ("~" "~/bibliography/" "~/LaTeX/" "~/bibtest/")))
+ '(ebib-bibtex-dialect (quote BibTeX))
+ '(ebib-default-entry-type "Book")
+ '(ebib-keywords-field-keep-sorted t)
+ '(ebib-uniquify-keys t)
+ '(ebib-use-timestamp t)
  '(package-selected-packages
    (quote
 	(popup xkcd writeroom-mode unbound private-diary palimpsest material-theme magit lorem-ipsum elpy ecb color-theme bbdb autopair auctex-latexmk 2048-game)))
