@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; emacsVersionControl.el - Magit setup
 ;;
-;; Time-stamp: " "
+;; Time-stamp: "2017-12-21 13:30:57 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Install dash.el (required by Magit)
@@ -21,7 +21,7 @@
 (add-to-list 'load-path "~/emacsExtRepos/magit/lisp")
 (require 'magit)
 
-(with-eval-after-load 'info 
+(with-eval-after-load 'info
   (info-initialize)
   (add-to-list 'Info-directory-list
 	       "~/emacsExtRepos/magit/Documentation/"))

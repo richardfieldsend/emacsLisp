@@ -2,7 +2,7 @@
 ;;
 ;; Emacs Initialisation from scratch.
 ;;
-;; Time-stamp: "2017-12-06 12:11:24 richard"
+;; Time-stamp: "2017-12-21 14:22:50 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set the location for initialisation files
@@ -34,6 +34,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bbdb-file "~/Dropbox/bbdb")
  '(ebib-autogenerate-keys t)
  '(ebib-bib-search-dirs (quote ("~" "~/bibliography/" "~/LaTeX/")))
  '(ebib-default-entry-type "Book")

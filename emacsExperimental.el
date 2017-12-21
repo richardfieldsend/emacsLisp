@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2017-11-28 17:32:21 richard"
+;; Time-stamp: "2017-12-21 16:55:25 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -144,3 +144,26 @@
 ;;       ("Journal" ?j "\n* %^{topic} %T \n%i%?\n" "~/Dropbox/orgfiles/journal.org")
 ;;       ("Book" ?b "\n* %^{Book Title} %t :READING: \n%[l:/booktemp.txt]\n"
 ;;               "~/Dropbox/orgfiles/journal2.org")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Big Brother Insidious Database
+;;
+;; Once installed, I have also customised the configuration so that it
+;; is looking for the bbdb data file in ~/Dropbox/bbdb.  That way the
+;; file is available at home as well as at work.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/bbdb/lisp")
+
+(require 'bbdb-loaddefs "~/emacsExtRepos/bbdb/lisp/bbdb-loaddefs.el")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; lorem-ipsum - from the repository.
+;;
+;; Lorem-ipsum is a way of adding filler text to check layout etc.
+;; Now installed from the repo.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/emacs-lorem-ipsum")
+(require 'lorem-ipsum)
+(global-set-key (kbd "C-c C-l s") 'lorem-ipsum-insert-sentences)
+(global-set-key (kbd "C-c C-l p") 'lorem-ipsum-insert-paragraphs)
+(global-set-key (kbd "C-c C-l l") 'lorem-ipsum-insert-list)
