@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2017-12-21 17:01:07 richard"
+;; Time-stamp: "2017-12-28 14:18:56 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -167,3 +167,9 @@
 (global-set-key (kbd "C-c C-l s") 'lorem-ipsum-insert-sentences)
 (global-set-key (kbd "C-c C-l p") 'lorem-ipsum-insert-paragraphs)
 (global-set-key (kbd "C-c C-l l") 'lorem-ipsum-insert-list)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Projectile
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/projectile")
+(require 'projectile)

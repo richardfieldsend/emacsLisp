@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; OrgMode Initialisation File: Install and enable OrgMode.
 ;;
-;; Time-stamp: "2017-12-11 16:45:44 richard"
+;; Time-stamp: "2017-12-17 00:53:32 rf343"
 ;;
 ;; Installed OrgMode within the emacsExtRepos folder following
 ;; instructions here: http://orgmode.org/manual/Installation.html
@@ -33,3 +33,12 @@
 		  (lambda ()
 			(org-bullets-mode t)))
 (setq org-hide-leading-stars t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Add the org files (following David O'Toole org tutorial).
+;;
+;; will end up providing an agenda.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq org-agenda-files (list "~/Dropbox/orgfiles/work.org"
+							 "~/Dropbox/orgfiles/school.org"
+							 "~/Dropbox/orgfiles/home.org"))
