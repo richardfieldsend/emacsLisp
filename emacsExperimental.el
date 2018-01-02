@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-01-02 09:54:53 richard"
+;; Time-stamp: "2018-01-02 10:38:09 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -125,7 +125,8 @@
 ;; Remember - from repository
 ;;
 ;; Repository information:
-;; ***
+;; origin  git://repo.or.cz/remember-el.git (fetch)
+;; origin  git://repo.or.cz/remember-el.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/remember")
 
@@ -186,7 +187,8 @@
 ;; Now installed from the repo.
 ;;
 ;; Repository information:
-;; ***
+;; origin  https://github.com/jschaf/emacs-lorem-ipsum (fetch)
+;; origin  https://github.com/jschaf/emacs-lorem-ipsum (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/emacs-lorem-ipsum")
 (require 'lorem-ipsum)

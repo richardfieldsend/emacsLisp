@@ -2,11 +2,17 @@
 ;; emacsLatex.el: Initialisation file for adding LaTeX functionality
 ;; to Emacs using AucTeX.
 ;;
-;; Time-stamp: "2017-11-10 11:19:14 richard"
+;; Time-stamp: "2018-01-02 10:41:37 rf343"
 ;;
 ;; All things LaTeX and associated.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set load path to include AUCTeX and load it to support LaTeX
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Installing from repository.
+;;
+;; Repository information:
+;; origin  https://github.com/jwiegley/auctex.git (fetch)
+;; origin  https://github.com/jwiegley/auctex.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepo/auctex")
 (load "auctex.el" nil t t)

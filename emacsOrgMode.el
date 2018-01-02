@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; OrgMode Initialisation File: Install and enable OrgMode.
 ;;
-;; Time-stamp: "2017-12-17 00:53:32 rf343"
+;; Time-stamp: "2018-01-02 10:45:00 rf343"
 ;;
 ;; Installed OrgMode within the emacsExtRepos folder following
 ;; instructions here: http://orgmode.org/manual/Installation.html
@@ -9,10 +9,20 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set folders for org-mode installation to be on load-path
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Installation from repository
+;;
+;; Repository information:
+;; origin  https://github.com/jwiegley/org-mode.git (fetch)
+;; origin  https://github.com/jwiegley/org-mode.git (push)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/org-mode/lisp")
 (add-to-list 'load-path "~/emacsExtRepos/org-mode/contrib/lisp" t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add folder for org-bullets (pretty bullets) to be on load-path
+;;
+;; Repository information:
+;; origin  https://github.com/sabof/org-bullets.git (fetch)
+;; origin  https://github.com/sabof/org-bullets.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/org-bullets")
 

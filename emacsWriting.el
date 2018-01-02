@@ -2,7 +2,7 @@
 ;; emacsWriting.el: Configuring writing tools and techniques for using
 ;; Emacs to create text.
 ;;
-;; Time-stamp: "2017-11-09 17:36:12 richard"
+;; Time-stamp: "2018-01-02 10:49:06 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define using British dictionary and activate ispell
@@ -12,6 +12,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Palimpsest - safe text rather than just deleting it
+;;
+;; Repository information:
+;; origin  https://github.com/danielsz/Palimpsest.git (fetch)
+;; origin  https://github.com/danielsz/Palimpsest.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/Palimpsest")
 (add-hook 'text-mode-hook 'palimpsest-mode)
