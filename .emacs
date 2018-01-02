@@ -2,7 +2,7 @@
 ;;
 ;; Emacs Initialisation from scratch.
 ;;
-;; Time-stamp: "2017-12-21 20:49:55 rf343"
+;; Time-stamp: "2018-01-02 11:11:24 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set the location for initialisation files
@@ -45,7 +45,7 @@
  '(ebib-use-timestamp t)
  '(package-selected-packages
    (quote
-	(popup xkcd writeroom-mode unbound private-diary palimpsest material-theme magit lorem-ipsum elpy ecb color-theme bbdb autopair auctex-latexmk 2048-game)))
+	(popup xkcd writeroom-mode unbound private-diary material-theme magit lorem-ipsum elpy ecb color-theme bbdb autopair auctex-latexmk 2048-game)))
  '(reftex-insert-label-flags (quote (t t)))
  '(remember-data-directory "~/Dropbox/remember")
  '(remember-data-file "~/Dropbox/remember/notes")
