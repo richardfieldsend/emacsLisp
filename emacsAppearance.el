@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; emacsAppearance.el: Look and feel settings for Emacs
 ;;
-;; Time-stamp: "2017-11-17 00:56:24 rf343"
+;; Time-stamp: "2018-01-02 09:46:11 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Initial appearance configuration - inspired by Emacs striptease
@@ -32,6 +32,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Activate a colour theme
+;;
+;; Repository information:
+;; origin  https://github.com/cpaulik/emacs-material-theme.git (fetch)
+;; origin  https://github.com/cpaulik/emacs-material-theme.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/emacs-material-theme")
 (require 'material-theme)
@@ -39,6 +43,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Rainbow delimeters
+;;
+;; Repository information:
+;; origin  https://github.com/Fanael/rainbow-delimiters.git (fetch)
+;; origin  https://github.com/Fanael/rainbow-delimiters.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/rainbow-delimiters")
 (require 'rainbow-delimiters)

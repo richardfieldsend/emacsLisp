@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2017-12-28 14:18:56 rf343"
+;; Time-stamp: "2018-01-02 09:54:53 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -97,12 +97,24 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Minimap mode
+;;
+;; Repository information:
+;; origin  https://github.com/dengste/minimap.git (fetch)
+;; origin  https://github.com/dengste/minimap.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/minimap")
 (require 'minimap)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ebib
+;;
+;; Repository information (parsebib):
+;; origin  https://github.com/joostkremers/parsebib.git (fetch)
+;; origin  https://github.com/joostkremers/parsebib.git (push)
+;;
+;; Repository information (ebib):
+;; origin  https://github.com/joostkremers/ebib.git (fetch)
+;; origin  https://github.com/joostkremers/ebib.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/parsebib")
 (require 'parsebib)
@@ -111,6 +123,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Remember - from repository
+;;
+;; Repository information:
+;; ***
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/remember")
 
@@ -122,6 +137,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Very silly - but this is NyanCat mode
+;;
+;; Repository information:
+;; origin  https://github.com/TeMPOraL/nyan-mode.git (fetch)
+;; origin  https://github.com/TeMPOraL/nyan-mode.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/nyan-mode")
 (require 'nyan-mode)
@@ -151,6 +170,10 @@
 ;; Once installed, I have also customised the configuration so that it
 ;; is looking for the bbdb data file in ~/Dropbox/bbdb.  That way the
 ;; file is available at home as well as at work.
+;;
+;; Repository information:
+;; origin  https://git.savannah.nongnu.org/git/bbdb.git (fetch)
+;; origin  https://git.savannah.nongnu.org/git/bbdb.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/bbdb/lisp")
 
@@ -161,6 +184,9 @@
 ;;
 ;; Lorem-ipsum is a way of adding filler text to check layout etc.
 ;; Now installed from the repo.
+;;
+;; Repository information:
+;; ***
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/emacs-lorem-ipsum")
 (require 'lorem-ipsum)
@@ -170,6 +196,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Projectile
+;;
+;; Repository information:
+;; origin  https://github.com/bbatsov/projectile.git (fetch)
+;; origin  https://github.com/bbatsov/projectile.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/projectile")
 (require 'projectile)
