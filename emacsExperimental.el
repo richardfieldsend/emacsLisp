@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-01-02 10:38:09 rf343"
+;; Time-stamp: "2018-01-02 17:38:46 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -131,9 +131,9 @@
 (add-to-list 'load-path "~/emacsExtRepos/remember")
 
 (require 'remember)
-(setq remember-annotation-functions '(org-remember-annotation))
-(setq remember-handler-functions '(org-remember-handler))
-(add-hook 'remember-mode-hook 'org-remember-apply-template)
+;; (setq remember-annotation-functions '(org-remember-annotation))
+;; (setq remember-handler-functions '(org-remember-handler))
+;; (add-hook 'remember-mode-hook 'org-remember-apply-template)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -205,3 +205,23 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/projectile")
 (require 'projectile)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Visual fill column (dependency for writeroom mode)
+;;
+;; Repository information:
+;; origin  git@github.com:joostkremers/visual-fill-column.git (fetch)
+;; origin  git@github.com:joostkremers/visual-fill-column.git (push)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/visual-fill-column")
+(require 'visual-fill-column)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Writeroom mode
+;;
+;; Repository information:
+;; origin  git@github.com:joostkremers/writeroom-mode.git (fetch)
+;; origin  git@github.com:joostkremers/writeroom-mode.git (push)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/writeroom-mode")
+(require 'writeroom-mode)
