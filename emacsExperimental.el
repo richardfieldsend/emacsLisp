@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-01-03 12:46:25 rf343"
+;; Time-stamp: "2018-01-03 16:59:14 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -205,6 +205,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/projectile")
 (require 'projectile)
+(projectile-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual fill column (dependency for writeroom mode)

@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  emacsProgramming.el: Make programming easier and better.
 ;;
-;; Time-stamp: "2017-11-17 01:20:50 rf343"
+;; Time-stamp: "2018-01-03 17:39:20 richard"
 ;;
 ;; Emacs provides support for all manner of programming languages, so
 ;;  this file could get quite lengthy, and may need splitting out
@@ -37,8 +37,8 @@
 ;; https://realpython.com/blog/python/emacs-the-best-python-editor/
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (package-initialize)
-;; (elpy-enable)
+;;(package-initialize)
+;;(elpy-enable)
 ;; ;;Activate pep8 corrections when file is saved
 ;; (add-to-list 'load-path "~/emacsExtRepos/py-autopep8/")
 ;; (require 'py-autopep8)
