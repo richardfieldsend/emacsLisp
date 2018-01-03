@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-01-02 17:38:46 richard"
+;; Time-stamp: "2018-01-03 11:53:30 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -225,3 +225,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/writeroom-mode")
 (require 'writeroom-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Highlight the current line to help focus the eyes (using the
+;; built-in hl-line-mode). Instructions on doing this were found here:
+;; http://emacsblog.org/2007/04/09/highlight-the-current-line/
+;;
+;; Other methods are available for this highlighting, but if this
+;; works it doesn't require any extra libraries.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(global-hl-line-mode 1)

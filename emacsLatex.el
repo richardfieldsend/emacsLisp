@@ -2,7 +2,7 @@
 ;; emacsLatex.el: Initialisation file for adding LaTeX functionality
 ;; to Emacs using AucTeX.
 ;;
-;; Time-stamp: "2018-01-02 10:41:37 rf343"
+;; Time-stamp: "2018-01-03 12:05:15 rf343"
 ;;
 ;; All things LaTeX and associated.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -87,3 +87,16 @@
 ;; Set default bibliography
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq reftex-default-bibliography '("~/bibliography_files/books.bib"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Folding of macros and environments - as described in the manual
+;; page here:
+;; https://www.gnu.org/software/auctex/manual/auctex/Folding.html
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-hook 'LaTeX-mode-hook (lambda ()
+							 (TeX-fold-mode 1)))
+(add-hook 'TeX-mode-hook (lambda ()
+							 (TeX-fold-mode 1)))
+(add-hook 'find-file-hook 'TeX-fold-buffer t) ; fold items
+										; automatically on loading.
