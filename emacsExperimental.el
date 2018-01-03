@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-01-03 11:53:30 rf343"
+;; Time-stamp: "2018-01-03 12:46:25 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -235,3 +235,27 @@
 ;; works it doesn't require any extra libraries.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-hl-line-mode 1)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Zone Mode - a sort of screen saver
+;;
+;; See the page here: https://www.emacswiki.org/emacs/ZoneMode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'zone)
+(zone-when-idle 60)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Set latitude and longtitude (to display sunrise/sunset times)
+;;
+;; See:
+;; https://www.gnu.org/software/emacs/manual/html_node/emacs/
+;; Sunrise_002fSunset.html#Sunrise_002fSunset
+;;
+;; Notes:
+;; To view sunrise/sunset for 'today' M-x sunrise-sunset
+;; For specific date: C-u M-x sunrise-sunset and enter date
+;; For month (from calendar display) M-x calendar-sunrise-sunset-month
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq calendar-latitude 52.1)
+(setq calendar-longitude 0.3)
+(setq calendar-location-name "Linton, Cambridgeshire")
