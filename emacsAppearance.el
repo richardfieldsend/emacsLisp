@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; emacsAppearance.el: Look and feel settings for Emacs
 ;;
-;; Time-stamp: "2018-01-02 09:46:11 richard"
+;; Time-stamp: "2018-01-03 13:00:55 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Initial appearance configuration - inspired by Emacs striptease
@@ -20,7 +20,9 @@
 (if (string= system-name "psychol-ford")
     (setq initial-scratch-message
 	  "'Space,' it says, 'is big. Really big. You just won't believe how vastly, hugely, mindbogglingly big it is.\nI mean, you may think it's a long way down the road to the chemist, but that's just peanuts to space.'\n\nHitch Hikers Guide To The Galaxy\n\tDouglas Adams."))
-
+(if (string= system-name "plantsci-cowin01")
+	(setq initial-scratch-message
+		  "The most exciting phrase to hear in science, the one that heralds the most discoveries, is\nnot 'Eureka! (I found it!), but 'That's funny...'\n\nIsaac Asimov"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual configuration
