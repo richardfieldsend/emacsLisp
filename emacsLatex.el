@@ -2,7 +2,7 @@
 ;; emacsLatex.el: Initialisation file for adding LaTeX functionality
 ;; to Emacs using AucTeX.
 ;;
-;; Time-stamp: "2018-01-03 12:05:15 rf343"
+;; Time-stamp: "2018-01-03 13:10:13 rf343"
 ;;
 ;; All things LaTeX and associated.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -96,7 +96,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-hook 'LaTeX-mode-hook (lambda ()
 							 (TeX-fold-mode 1)))
-(add-hook 'TeX-mode-hook (lambda ()
+;; (add-hook 'TeX-mode-hook (lambda ()
 							 (TeX-fold-mode 1)))
-(add-hook 'find-file-hook 'TeX-fold-buffer t) ; fold items
+;; (add-hook 'find-file-hook 'TeX-fold-buffer t) ; fold items
 										; automatically on loading.
