@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; emacsAppearance.el: Look and feel settings for Emacs
 ;;
-;; Time-stamp: "2018-01-03 13:00:55 rf343"
+;; Time-stamp: "2018-01-03 13:07:39 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Initial appearance configuration - inspired by Emacs striptease
@@ -13,13 +13,24 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set startup message on the basis of the system name...
 ;;
-;; ziggy-latitude
+;; The scratch buffer is almost entirely empty, apart from the quotes
+;; below, which are displayed on the basis of the system name in
+;; question.  To highlight which one has each quote I have commented
+;; on the machine name.
+;;
+;; ziggy-latitude - my home laptop (an old Dell Latitude, hence the name)
 (if (string= system-name "ziggy-latitude")
     (setq initial-scratch-message
-	  "I use Emacs, which might be thought of as a thermonuclear word processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
+	  "I use Emacs, which might be thought of as a thermonuclear word
+processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
+;;
+;; psychol-ford - my iMac running Linux Mint
 (if (string= system-name "psychol-ford")
     (setq initial-scratch-message
-	  "'Space,' it says, 'is big. Really big. You just won't believe how vastly, hugely, mindbogglingly big it is.\nI mean, you may think it's a long way down the road to the chemist, but that's just peanuts to space.'\n\nHitch Hikers Guide To The Galaxy\n\tDouglas Adams."))
+		  "'Space,' it says, 'is big. Really big. You just won't believe how vastly, hugely, mindbogglingly big it is.\nI mean, you may think it's a long way down the road to the chemist, but that's just peanuts to space.'\n\nHitch Hikers Guide To The Galaxy\n\tDouglas Adams."))
+;;
+;; plantsci-cowin01 - Plant Sciences desktop (don't know why it is
+;; referred to as cowin01 as it hasn't run Windows under my watch!)
 (if (string= system-name "plantsci-cowin01")
 	(setq initial-scratch-message
 		  "The most exciting phrase to hear in science, the one that heralds the most discoveries, is\nnot 'Eureka! (I found it!), but 'That's funny...'\n\nIsaac Asimov"))
