@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-01-05 16:27:16 richard"
+;; Time-stamp: "2018-01-08 12:26:02 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -266,3 +266,27 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (set-face-attribute 'default nil :family "Noto Mono"
 					:height 90)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Enable yasnippets mode
+;;
+;; Repository information:
+;; https://github.com/joaotavora/yasnippet
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; I have cloned the yasnippets snippets collection from this
+;; repository:
+;;
+;; git@github.com:AndreaCrotti/yasnippet-snippets.git
+;;
+;; The code below imports the snippets from the repository and from a
+;; local repository when it is available.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq yas-snippet-dirs
+      '("~/emacsLisp/snippets"                 ;; personal snippets
+        "~/emacsExtRepos/yasnippet-snippets/snippets/"           ;; foo-mode and bar-mode snippet collection
+       ))

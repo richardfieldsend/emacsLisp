@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  emacsProgramming.el: Make programming easier and better.
 ;;
-;; Time-stamp: "2018-01-03 17:39:20 richard"
+;; Time-stamp: "2018-01-09 17:40:54 richard"
 ;;
 ;; Emacs provides support for all manner of programming languages, so
 ;;  this file could get quite lengthy, and may need splitting out
@@ -37,16 +37,19 @@
 ;; https://realpython.com/blog/python/emacs-the-best-python-editor/
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;(package-initialize)
-;;(elpy-enable)
-;; ;;Activate pep8 corrections when file is saved
-;; (add-to-list 'load-path "~/emacsExtRepos/py-autopep8/")
-;; (require 'py-autopep8)
-;; (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
-;; ;;Activate flycheck which may be better than flymake?
-;; (when (require 'flycheck nil t)
-;;   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-;;   (add-hook 'elpy-mode-hook 'flycheck-mode))
+(package-initialize)
+(elpy-enable)
+;;Activate pep8 corrections when file is saved
+;;
+;; Repository information:
+;; git@github.com:paetzke/py-autopep8.el.git
+(add-to-list 'load-path "~/emacsExtRepos/py-autopep8/")
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+;;Activate flycheck which may be better than flymake?
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Notes on Python Mode: I have enabled elpy to manage Python
