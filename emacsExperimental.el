@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-01-08 12:26:02 richard"
+;; Time-stamp: "2018-01-06 00:03:42 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -96,16 +96,6 @@
    (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Minimap mode
-;;
-;; Repository information:
-;; origin  https://github.com/dengste/minimap.git (fetch)
-;; origin  https://github.com/dengste/minimap.git (push)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'load-path "~/emacsExtRepos/minimap")
-(require 'minimap)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ebib
 ;;
 ;; Repository information (parsebib):
@@ -129,23 +119,10 @@
 ;; origin  git://repo.or.cz/remember-el.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/remember")
-
 (require 'remember)
 ;; (setq remember-annotation-functions '(org-remember-annotation))
 ;; (setq remember-handler-functions '(org-remember-handler))
 ;; (add-hook 'remember-mode-hook 'org-remember-apply-template)
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Very silly - but this is NyanCat mode
-;;
-;; Repository information:
-;; origin  https://github.com/TeMPOraL/nyan-mode.git (fetch)
-;; origin  https://github.com/TeMPOraL/nyan-mode.git (push)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'load-path "~/emacsExtRepos/nyan-mode")
-(require 'nyan-mode)
-(nyan-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; org remember settings
@@ -206,44 +183,6 @@
 (add-to-list 'load-path "~/emacsExtRepos/projectile")
 (require 'projectile)
 (projectile-mode)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Visual fill column (dependency for writeroom mode)
-;;
-;; Repository information:
-;; origin  git@github.com:joostkremers/visual-fill-column.git (fetch)
-;; origin  git@github.com:joostkremers/visual-fill-column.git (push)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'load-path "~/emacsExtRepos/visual-fill-column")
-(require 'visual-fill-column)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Writeroom mode
-;;
-;; Repository information:
-;; origin  git@github.com:joostkremers/writeroom-mode.git (fetch)
-;; origin  git@github.com:joostkremers/writeroom-mode.git (push)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'load-path "~/emacsExtRepos/writeroom-mode")
-(require 'writeroom-mode)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Highlight the current line to help focus the eyes (using the
-;; built-in hl-line-mode). Instructions on doing this were found here:
-;; http://emacsblog.org/2007/04/09/highlight-the-current-line/
-;;
-;; Other methods are available for this highlighting, but if this
-;; works it doesn't require any extra libraries.
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(global-hl-line-mode 1)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Zone Mode - a sort of screen saver
-;;
-;; See the page here: https://www.emacswiki.org/emacs/ZoneMode
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'zone)
-(zone-when-idle 60)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set latitude and longtitude (to display sunrise/sunset times)

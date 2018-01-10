@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; emacsAppearance.el: Look and feel settings for Emacs
 ;;
-;; Time-stamp: "2018-01-03 13:07:39 rf343"
+;; Time-stamp: "2018-01-06 00:02:36 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Initial appearance configuration - inspired by Emacs striptease
@@ -77,3 +77,68 @@ processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
 ;; Turn on global line numbering at the start of the line.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-linum-mode t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; font stuff
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(set-face-attribute 'default nil :family "Noto Mono"
+					:height 75)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Minimap mode
+;;
+;; Repository information:
+;; origin  https://github.com/dengste/minimap.git (fetch)
+;; origin  https://github.com/dengste/minimap.git (push)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/minimap")
+(require 'minimap)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Visual fill column (dependency for writeroom mode)
+;;
+;; Repository information:
+;; origin  git@github.com:joostkremers/visual-fill-column.git (fetch)
+;; origin  git@github.com:joostkremers/visual-fill-column.git (push)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/visual-fill-column")
+(require 'visual-fill-column)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Writeroom mode
+;;
+;; Repository information:
+;; origin  git@github.com:joostkremers/writeroom-mode.git (fetch)
+;; origin  git@github.com:joostkremers/writeroom-mode.git (push)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/writeroom-mode")
+(require 'writeroom-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Highlight the current line to help focus the eyes (using the
+;; built-in hl-line-mode). Instructions on doing this were found here:
+;; http://emacsblog.org/2007/04/09/highlight-the-current-line/
+;;
+;; Other methods are available for this highlighting, but if this
+;; works it doesn't require any extra libraries.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(global-hl-line-mode 1)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Zone Mode - a sort of screen saver
+;;
+;; See the page here: https://www.emacswiki.org/emacs/ZoneMode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'zone)
+(zone-when-idle 60)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Very silly - but this is NyanCat mode
+;;
+;; Repository information:
+;; origin  https://github.com/TeMPOraL/nyan-mode.git (fetch)
+;; origin  https://github.com/TeMPOraL/nyan-mode.git (push)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/nyan-mode")
+(require 'nyan-mode)
+(nyan-mode)
