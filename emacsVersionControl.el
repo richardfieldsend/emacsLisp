@@ -23,6 +23,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/with-editor")
 
+(add-to-list 'load-path "~/emacsExtRepos/ghub")
+(require 'ghub)
+
+(add-to-list 'load-path "~/emacsExtRepos/magit-popup")
+(require 'magit-popup)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Install Magit
 ;;

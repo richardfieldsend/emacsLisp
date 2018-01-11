@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  emacsProgramming.el: Make programming easier and better.
 ;;
-;; Time-stamp: "2018-01-09 17:40:54 richard"
+;; Time-stamp: "2018-01-11 23:52:31 rf343"
 ;;
 ;; Emacs provides support for all manner of programming languages, so
 ;;  this file could get quite lengthy, and may need splitting out
@@ -37,19 +37,19 @@
 ;; https://realpython.com/blog/python/emacs-the-best-python-editor/
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(package-initialize)
-(elpy-enable)
+;(package-initialize)
+;(elpy-enable)
 ;;Activate pep8 corrections when file is saved
 ;;
 ;; Repository information:
 ;; git@github.com:paetzke/py-autopep8.el.git
-(add-to-list 'load-path "~/emacsExtRepos/py-autopep8/")
-(require 'py-autopep8)
-(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+;(add-to-list 'load-path "~/emacsExtRepos/py-autopep8/")
+;(require 'py-autopep8)
+;(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 ;;Activate flycheck which may be better than flymake?
-(when (require 'flycheck nil t)
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
+;(when (require 'flycheck nil t)
+;  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+;  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Notes on Python Mode: I have enabled elpy to manage Python
@@ -61,3 +61,8 @@
 ;; related to the issue that gets thrown up on the screensaver).  I
 ;; haven't really used this mode 'in anger', but it does some nice
 ;; stuff with auto-completion.
+;;
+;; However, it does cause an issue with AuCTex where it throws an
+;; error message about latex dialect!
+;;
+;; Investigations are on-going.

@@ -2,7 +2,7 @@
 ;;
 ;; Emacs Initialisation from scratch.
 ;;
-;; Time-stamp: "2018-01-03 17:15:15 richard"
+;; Time-stamp: "2018-01-10 21:36:54 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set the location for initialisation files
@@ -12,7 +12,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;(package-initialize)
 
 (add-to-list 'load-path "~/emacsLisp/")
 
@@ -52,7 +52,7 @@
  '(ebib-use-timestamp t)
  '(package-selected-packages
    (quote
-	(popup xkcd writeroom-mode unbound private-diary material-theme magit lorem-ipsum elpy ecb color-theme bbdb autopair auctex-latexmk 2048-game)))
+	(popup xkcd writeroom-mode unbound private-diary material-theme magit lorem-ipsum elpy ecb color-theme bbdb autopair 2048-game)))
  '(reftex-insert-label-flags (quote (t t)))
  '(remember-data-directory "~/Dropbox/remember")
  '(remember-data-file "~/Dropbox/remember/notes")
