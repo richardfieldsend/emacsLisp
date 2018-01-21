@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-01-06 00:03:42 rf343"
+;; Time-stamp: "2018-01-18 21:06:52 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -201,12 +201,6 @@
 (setq calendar-location-name "Linton, Cambridgeshire")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; font stuff
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(set-face-attribute 'default nil :family "Noto Mono"
-					:height 90)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Enable yasnippets mode
 ;;
 ;; Repository information:
@@ -229,3 +223,13 @@
       '("~/emacsLisp/snippets"                 ;; personal snippets
         "~/emacsExtRepos/yasnippet-snippets/snippets/"           ;; foo-mode and bar-mode snippet collection
        ))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Save Place - save where you are in the document so you go back
+;; there automagically.
+;;
+;; As described here: https://www.emacswiki.org/emacs/SavePlace
+;;
+;; This is built in in Emacs after v. 24.5
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(save-place-mode 1)

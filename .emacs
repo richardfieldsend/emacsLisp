@@ -2,7 +2,7 @@
 ;;
 ;; Emacs Initialisation from scratch.
 ;;
-;; Time-stamp: "2018-01-10 21:36:54 rf343"
+;; Time-stamp: "2018-01-18 20:19:27 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set the location for initialisation files
@@ -19,8 +19,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Split out Emacs Initialisation Files for various purposes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load "emacsVersionControl")		; Magit setup
 (load "emacsAppearance")		; Appearance setup
+(load "emacsVersionControl")		; Magit setup
 (load "emacsFileHandling")		; File handling setup
 (load "emacsProgramming")		; Programming settings
 (load "emacsWriting")			; writing stuff
@@ -52,7 +52,7 @@
  '(ebib-use-timestamp t)
  '(package-selected-packages
    (quote
-	(popup xkcd writeroom-mode unbound private-diary material-theme magit lorem-ipsum elpy ecb color-theme bbdb autopair 2048-game)))
+	(auctex popup xkcd writeroom-mode unbound private-diary material-theme magit lorem-ipsum ecb color-theme bbdb autopair 2048-game)))
  '(reftex-insert-label-flags (quote (t t)))
  '(remember-data-directory "~/Dropbox/remember")
  '(remember-data-file "~/Dropbox/remember/notes")
