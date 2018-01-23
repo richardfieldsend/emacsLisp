@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-01-18 21:06:52 rf343"
+;; Time-stamp: "2018-01-23 14:01:46 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -233,3 +233,5 @@
 ;; This is built in in Emacs after v. 24.5
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (save-place-mode 1)
+(add-to-list 'load-path "~/emacsExtRepos/emacs-ipython-notebook/lisp/")
+(require 'ein)
