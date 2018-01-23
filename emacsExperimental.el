@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-01-23 14:01:46 richard"
+;; Time-stamp: "2018-01-23 14:36:03 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -233,5 +233,24 @@
 ;; This is built in in Emacs after v. 24.5
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (save-place-mode 1)
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; websocket activation
+;;
+;; Repository information
+;; https://github.com/ahyatt/emacs-websocket
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/emacs-websocket/")
+(require 'websocket)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; iPython/Jupyter configuration.
+;;
+;; Repository information:
+;; https://github.com/tkf/emacs-ipython-notebook
+;;
+;; Information on setting this up here:
+;; https://realpython.com/blog/python/emacs-the-best-python-editor/
+;; http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/emacs-ipython-notebook/lisp/")
 (require 'ein)

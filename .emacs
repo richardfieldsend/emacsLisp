@@ -2,7 +2,7 @@
 ;;
 ;; Emacs Initialisation from scratch.
 ;;
-;; Time-stamp: "2018-01-18 20:19:27 rf343"
+;; Time-stamp: "2018-01-23 14:50:17 richard"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set the location for initialisation files
@@ -50,6 +50,7 @@
  '(ebib-keywords-list (quote ("epub" "humble bundle")))
  '(ebib-reading-list-file "my-toread-list.txt")
  '(ebib-use-timestamp t)
+ '(ein:default-url-or-port "http://localhost:8888/")
  '(package-selected-packages
    (quote
 	(auctex popup xkcd writeroom-mode unbound private-diary material-theme magit lorem-ipsum ecb color-theme bbdb autopair 2048-game)))
