@@ -2,7 +2,7 @@
 ;; emacsLatex.el: Initialisation file for adding LaTeX functionality
 ;; to Emacs using AucTeX.
 ;;
-;; Time-stamp: "2018-01-18 21:06:16 rf343"
+;; Time-stamp: "2018-01-26 20:58:21 rf343"
 ;;
 ;; All things LaTeX and associated.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -107,3 +107,43 @@
 							 (TeX-fold-mode 1)))
 
 (setq LaTeX-default-author '("Richard Fieldsend"))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; This works, but requires the menu bar to be turned on so you can
+;; select the appropriate command. The results then get displayed in a
+;; second buffer.  It seems that if you have a multi-part document the
+;; count isn't correct.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; TeXcount setup for TeXcount version 2.3 and later
+;;
+(defun texcount ()
+  (interactive)
+  (let*
+    ( (this-file (buffer-file-name))
+      (enc-str (symbol-name buffer-file-coding-system))
+      (enc-opt
+        (cond
+          ((string-match "utf-8" enc-str) "-utf8")
+          ((string-match "latin" enc-str) "-latin1")
+          ("-encoding=guess")
+      ) )
+      (word-count
+        (with-output-to-string
+          (with-current-buffer standard-output
+            (call-process "texcount" nil t nil "-0" enc-opt this-file)
+    ) ) ) )
+    (message word-count)
+) )
+(add-hook 'LaTeX-mode-hook (lambda () (define-key LaTeX-mode-map "\C-cw" 'texcount)))
+(add-hook 'latex-mode-hook (lambda () (define-key latex-mode-map "\C-cw" 'texcount)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; TeXcount setup for AUCTeX
+;;
+;; Output results of texcount command into another buffer according to
+;; this page: http://app.uio.no/ifi/texcount/faq.html
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'tex)
+(add-to-list 'TeX-command-list
+      (list "TeXcount" "texcount %s.tex" 'TeX-run-command nil t))
