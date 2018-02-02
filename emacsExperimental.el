@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-01-23 14:36:03 richard"
+;; Time-stamp: "2018-02-01 23:48:00 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -254,3 +254,21 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/emacs-ipython-notebook/lisp/")
 (require 'ein)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; nhxtml - for doing html and stuff
+;;
+;; git repository information
+;; git@github.com:jwiegley/nxhtml.git
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;(load "~/emacsExtRepos/nxhtml/autostart.el")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; nxml mode - for xml and similar documents.
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/emacsExtRepos/nxml-mode-20041004/")
+(load "~/emacsExtRepos/nxml-mode-20041004/rng-auto.el")
+(setq auto-mode-alist
+	  (cons '("\\.\\(xml\\|xsl\\|rng\\|xhtml\\|html\\)\\'" .nxml-mode)
+			auto-mode-alist))
