@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;  emacsProgramming.el: Make programming easier and better.
 ;;
-;; Time-stamp: "2018-01-13 21:31:46 rf343"
+;; Time-stamp: "2018-02-09 11:03:33 rf343"
 ;;
 ;; Emacs provides support for all manner of programming languages, so
 ;;  this file could get quite lengthy, and may need splitting out
@@ -50,6 +50,12 @@
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+;; to use with jupyter?
+(setq python-shell-interpreter "jupyter"
+      python-shell-interpreter-args "console --simple-prompt")
+
+;(elpy-use-ipython)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Notes on Python Mode: I have enabled elpy to manage Python
