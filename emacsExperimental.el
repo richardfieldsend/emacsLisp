@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-02-01 23:48:00 rf343"
+;; Time-stamp: "2018-02-13 00:25:57 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
@@ -70,15 +70,14 @@
 (setq make-backup-files t		; make backups
       backup-by-copying t		; don't clobber files
       version-control t			; number the backups
-      delete-old-versions t		; remove excessive files
-      kept-old-versions 10		; see link to info about this
+      kept-old-versions 3		; see link to info about this
       kept-new-versions 2		; https://www.gnu.org/software/emacs/manual/html_node/emacs/Backup-Deletion.html
       auto-save-default t		; auto-save buffers
       auto-save-timeout 30		; delay till the save (time in seconds)
-      auto-save-interval 100		; delay till the save
-					; (keystrokes)
+      auto-save-interval 100		; delay till the save (keystrokes)
       vc-make-backup-files t		;
       )
+(setq delete-old-versions t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Use UTF-8 everywhere in Emacs. You know you want to!
@@ -272,3 +271,10 @@
 (setq auto-mode-alist
 	  (cons '("\\.\\(xml\\|xsl\\|rng\\|xhtml\\|html\\)\\'" .nxml-mode)
 			auto-mode-alist))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; turn off frame stuff
+;;
+;; As described in a reddit post
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(toggle-frame-fullscreen)

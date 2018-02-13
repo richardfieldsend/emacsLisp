@@ -2,7 +2,7 @@
 ;;
 ;; Emacs Initialisation from scratch.
 ;;
-;; Time-stamp: "2018-01-23 14:50:17 richard"
+;; Time-stamp: "2018-02-13 00:32:21 rf343"
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set the location for initialisation files
@@ -54,6 +54,7 @@
  '(package-selected-packages
    (quote
 	(auctex popup xkcd writeroom-mode unbound private-diary material-theme magit lorem-ipsum ecb color-theme bbdb autopair 2048-game)))
+ '(recentf-save-file "~/emacsLisp/recentf")
  '(reftex-insert-label-flags (quote (t t)))
  '(remember-data-directory "~/Dropbox/remember")
  '(remember-data-file "~/Dropbox/remember/notes")
