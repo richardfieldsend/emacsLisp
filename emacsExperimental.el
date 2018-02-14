@@ -2,7 +2,7 @@
 ;;
 ;; emacsExperimental.el - initialisation functions testing.
 ;;
-;; Time-stamp: "2018-02-14 00:38:39 rf343"
+;; Time-stamp: "2018-02-14 10:22:40 richard"
 ;;
 ;;   ___ _ __ ___   __ _  ___ ___
 ;;  / _ \ '_ ` _ \ / _` |/ __/ __|
@@ -287,4 +287,11 @@
 ;;
 ;; As described in a reddit post
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(toggle-frame-fullscreen)
+;; (toggle-frame-fullscreen)
+;;
+;; I have commented this out because this switch forces full screen
+;; which means that Emacs doesn't share space with anything else! Not
+;; having the frame was nice, but if you want to have anything else on
+;; screen it doesn't work.  You can always toggle this using M-x
+;; toggle-frame-fullscreen.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
