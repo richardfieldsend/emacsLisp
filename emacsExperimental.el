@@ -1,9 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; emacsExperimental.el - initialisation functions testing.
-;;
-;; Time-stamp: "2018-02-14 10:22:40 richard"
-;;
+;; Time-stamp: "2018-02-19 09:51:26 richard"
 ;;   ___ _ __ ___   __ _  ___ ___
 ;;  / _ \ '_ ` _ \ / _` |/ __/ __|
 ;; |  __/ | | | | | (_| | (__\__ \
@@ -14,6 +10,9 @@
 ;; | |___ >  <| |_) |  __/ |  | | | | | | |  __/ | | | || (_| | |
 ;; |_____/_/\_\ .__/ \___|_|  |_|_| |_| |_|\___|_| |_|\__\__,_|_|
 ;;            |_|
+;; emacsExperimental: A place to try stuff out. Once it has proved
+;; itself stable entries in this file should be moved into a more
+;; permanent home (this doesn't always happen in a timely manner!)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time stamp functionality - time stamp in the first 8 lines of the
 ;; file will automatically update whenever the file is saved. The time
@@ -29,17 +28,14 @@
 ;; Remove extra whitespace at the end of the document when saving it.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Accept y/n answers rather than requiring yes/no
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (fset 'yes-or-no-p 'y-or-n-p)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual bell rather than irritating audible bell
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq visible-bell t)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Dynamic abbreviation functionality:
 ;;
@@ -65,7 +61,6 @@
 (setq-default abbrev-mode t)
 (setq abbrev-file-name "~/emacsLisp/abbrev_defs") ; where
 					; abbreviations are stored.
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Turn on word wrap for specific modes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -88,7 +83,6 @@
       vc-make-backup-files t		;
       )
 (setq delete-old-versions t)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Use UTF-8 everywhere in Emacs. You know you want to!
 ;;
@@ -103,7 +97,6 @@
 (prefer-coding-system 'utf-8)
 (when (display-graphic-p)
    (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ebib
 ;;
@@ -119,7 +112,6 @@
 (require 'parsebib)
 (add-to-list 'load-path "~/emacsExtRepos/ebib")
 (require 'ebib)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Remember - from repository
 ;;
@@ -132,7 +124,6 @@
 ;; (setq remember-annotation-functions '(org-remember-annotation))
 ;; (setq remember-handler-functions '(org-remember-handler))
 ;; (add-hook 'remember-mode-hook 'org-remember-apply-template)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; org remember settings
 ;; as outlined in this page:
@@ -163,9 +154,7 @@
 ;; origin  https://git.savannah.nongnu.org/git/bbdb.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/bbdb/lisp")
-
 (require 'bbdb-loaddefs "~/emacsExtRepos/bbdb/lisp/bbdb-loaddefs.el")
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; lorem-ipsum - from the repository.
 ;;
@@ -181,7 +170,6 @@
 (global-set-key (kbd "C-c C-l s") 'lorem-ipsum-insert-sentences)
 (global-set-key (kbd "C-c C-l p") 'lorem-ipsum-insert-paragraphs)
 (global-set-key (kbd "C-c C-l l") 'lorem-ipsum-insert-list)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Projectile
 ;;
@@ -192,7 +180,6 @@
 (add-to-list 'load-path "~/emacsExtRepos/projectile")
 (require 'projectile)
 (projectile-mode)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set latitude and longtitude (to display sunrise/sunset times)
 ;;
@@ -208,7 +195,6 @@
 (setq calendar-latitude 52.1)
 (setq calendar-longitude 0.3)
 (setq calendar-location-name "Linton, Cambridgeshire")
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Enable yasnippets mode
 ;;
@@ -218,7 +204,6 @@
 (add-to-list 'load-path "~/emacsExtRepos/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; I have cloned the yasnippets snippets collection from this
 ;; repository:
@@ -232,7 +217,6 @@
       '("~/emacsLisp/snippets"                 ;; personal snippets
         "~/emacsExtRepos/yasnippet-snippets/snippets/"           ;; foo-mode and bar-mode snippet collection
        ))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Save Place - save where you are in the document so you go back
 ;; there automagically.
@@ -263,7 +247,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/emacs-ipython-notebook/lisp/")
 (require 'ein)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; nhxtml - for doing html and stuff
 ;;
@@ -281,7 +264,6 @@
 (setq auto-mode-alist
 	  (cons '("\\.\\(xml\\|xsl\\|rng\\|xhtml\\|html\\)\\'" .nxml-mode)
 			auto-mode-alist))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; turn off frame stuff
 ;;

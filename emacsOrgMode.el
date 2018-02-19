@@ -1,16 +1,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; OrgMode Initialisation File: Install and enable OrgMode.
-;;
-;; Time-stamp: "2018-02-14 10:24:12 richard"
-;;
+;; Time-stamp: "2018-02-19 09:57:16 richard"
 ;;                                   ___            __  __           _
 ;;   ___ _ __ ___   __ _  ___ ___   / _ \ _ __ __ _|  \/  | ___   __| | ___
 ;;  / _ \ '_ ` _ \ / _` |/ __/ __| | | | | '__/ _` | |\/| |/ _ \ / _` |/ _ \
 ;; |  __/ | | | | | (_| | (__\__ \ | |_| | | | (_| | |  | | (_) | (_| |  __/
 ;;  \___|_| |_| |_|\__,_|\___|___/  \___/|_|  \__, |_|  |_|\___/ \__,_|\___|
 ;;                                            |___/
-;;
-;;
+;; emacsOrgMode: For many, the existence of OrgMode is the killer
+;; application for justifying using Emacs.  I can see that it is very
+;; powerful, but I haven't yet embraced that power. This file sets it
+;; up though.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Installed OrgMode within the emacsExtRepos folder following
 ;; instructions here: http://orgmode.org/manual/Installation.html
@@ -34,7 +33,6 @@
 ;; origin  https://github.com/sabof/org-bullets.git (push)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/org-bullets")
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Some global key bindings for working with org-mode.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -43,7 +41,6 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
 (setq org-log-done t)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Insert fancy bullets
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -52,7 +49,6 @@
 		  (lambda ()
 			(org-bullets-mode t)))
 (setq org-hide-leading-stars t)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Add the org files (following David O'Toole org tutorial).
 ;;

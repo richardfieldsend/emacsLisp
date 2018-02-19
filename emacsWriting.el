@@ -1,17 +1,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; emacsWriting.el: Configuring writing tools and techniques for using
-;; Emacs to create text.
-;;
-;; Time-stamp: "2018-02-14 10:27:23 richard"
-;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Time-stamp: "2018-02-19 09:42:04 richard"
 ;;                                 __        __    _ _   _
 ;;   ___ _ __ ___   __ _  ___ ___  \ \      / / __(_) |_(_)_ __   __ _
 ;;  / _ \ '_ ` _ \ / _` |/ __/ __|  \ \ /\ / / '__| | __| | '_ \ / _` |
 ;; |  __/ | | | | | (_| | (__\__ \   \ V  V /| |  | | |_| | | | | (_| |
 ;;  \___|_| |_| |_|\__,_|\___|___/    \_/\_/ |_|  |_|\__|_|_| |_|\__, |
 ;;                                                               |___/
-;;
+;; emacsWriting.el: Configuring writing tools and techniques for using
+;; Emacs to create text.
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Define using British dictionary and activate ispell

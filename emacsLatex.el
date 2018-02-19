@@ -1,15 +1,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; emacsLatex.el: Initialisation file for adding LaTeX functionality
-;; to Emacs using AucTeX.
-;;
-;; Time-stamp: "2018-02-14 00:40:28 rf343"
-;;
+;; Time-stamp: "2018-02-19 09:55:46 richard"
 ;;                                  _         _____   __  __
 ;;   ___ _ __ ___   __ _  ___ ___  | |    __ |_   _|__\ \/ /
 ;;  / _ \ '_ ` _ \ / _` |/ __/ __| | |   / _` || |/ _ \\  /
 ;; |  __/ | | | | | (_| | (__\__ \ | |__| (_| || |  __//  \
 ;;  \___|_| |_| |_|\__,_|\___|___/ |_____\__,_||_|\___/_/\_\
 ;;
+;; emacsLatex: install and configure AuCTeX, the plug-in that makes
+;; using LaTeX in Emacs a joy! Also gets reftex (internal references
+;; and reference citations) and preview mode set up.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; All things LaTeX and associated.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

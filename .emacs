@@ -2,7 +2,7 @@
 ;;
 ;; Emacs Initialisation from scratch.
 ;;
-;; Time-stamp: "2018-02-14 00:35:40 rf343"
+;; Time-stamp: "2018-02-14 10:46:33 richard"
 ;;
 ;;    ___ _ __ ___   __ _  ___ ___
 ;;   / _ \ '_ ` _ \ / _` |/ __/ __|
@@ -58,7 +58,7 @@
  '(ein:default-url-or-port "http://localhost:8888/")
  '(package-selected-packages
    (quote
-	(auctex popup xkcd writeroom-mode unbound private-diary material-theme magit lorem-ipsum ecb color-theme bbdb autopair 2048-game)))
+	(flycheck auctex popup xkcd writeroom-mode unbound private-diary material-theme magit lorem-ipsum ecb color-theme bbdb autopair 2048-game)))
  '(recentf-save-file "~/emacsLisp/recentf")
  '(reftex-insert-label-flags (quote (t t)))
  '(remember-data-directory "~/Dropbox/remember")

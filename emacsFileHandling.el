@@ -1,11 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; emacsFileHandling.el - managing aspects of how Emacs deals with
-;; files.
-;;
-;; * recentf: quickly access previously opened files.
-;;
-;; Time-stamp: "2018-02-14 00:39:26 rf343"
-;;
+;; Time-stamp: "2018-02-19 09:53:44 richard"
 ;;   ___ _ __ ___   __ _  ___ ___
 ;;  / _ \ '_ ` _ \ / _` |/ __/ __|
 ;; |  __/ | | | | | (_| | (__\__ \
@@ -16,6 +10,9 @@
 ;; |  _| | | |  __/  _  | (_| | | | | (_| | | | | | | (_| |
 ;; |_|   |_|_|\___|_| |_|\__,_|_| |_|\__,_|_|_|_| |_|\__, |
 ;;                                                   |___/
+;; emacsFileHandling: Customisation for 'recentf' (list of recently
+;; opened files which can be used to open them again quickly) and
+;; settings for how often this list gets saved.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; recentf - open recent files.

@@ -1,9 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;  emacsProgramming.el: Make programming easier and better.
-;;
-;; Time-stamp: "2018-02-14 10:25:25 richard"
-;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Time-stamp: "2018-02-19 09:57:57 richard"
 ;;   ___ _ __ ___   __ _  ___ ___
 ;;  / _ \ '_ ` _ \ / _` |/ __/ __|
 ;; |  __/ | | | | | (_| | (__\__ \
@@ -16,7 +12,6 @@
 ;; |_|   |_|  \___/ \__, |_|  \__,_|_| |_| |_|_| |_| |_|_|_| |_|\__, |
 ;;                  |___/                                       |___/
 ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Emacs provides support for all manner of programming languages, so
 ;;  this file could get quite lengthy, and may need splitting out
 ;;  again. Currently aimed at C/C++ and Python.
@@ -70,7 +65,6 @@
       python-shell-interpreter-args "console --simple-prompt")
 
 ;(elpy-use-ipython)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Notes on Python Mode: I have enabled elpy to manage Python
 ;; programming.  This provides support for pep8 which appears to be a

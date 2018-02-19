@@ -1,14 +1,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; emacsAppearance.el: Look and feel settings for Emacs
-;;
-;; Time-stamp: "2018-02-14 00:36:55 rf343"
-;;
-;;
+;; Time-stamp: "2018-02-19 09:46:18 richard"
 ;;   ___ _ __ ___   __ _  ___ ___
 ;;  / _ \ '_ ` _ \ / _` |/ __/ __|
 ;; |  __/ | | | | | (_| | (__\__ \
 ;;  \___|_| |_| |_|\__,_|\___|___/
-;;
 ;;     _
 ;;    / \   _ __  _ __   ___  __ _ _ __ __ _ _ __   ___ ___
 ;;   / _ \ | '_ \| '_ \ / _ \/ _` | '__/ _` | '_ \ / __/ _ \
@@ -16,20 +11,20 @@
 ;; /_/   \_\ .__/| .__/ \___|\__,_|_|  \__,_|_| |_|\___\___|
 ;;         |_|   |_|
 ;;
+;; Settings to customise appearance of the Emacs program. Most of this
+;; is configuration to strip unnecessary stuff like menu, tool and
+;; scroll bars.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Initial appearance configuration - inspired by Emacs striptease
 ;; page at: http://emacs-doctor.com/emacs-strip-tease.html
-;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq inhibit-startup-message t)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; font stuff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (set-face-attribute 'default nil
 					:font "Inconsolata Medium"
 					:height 75)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set startup message on the basis of the system name...
 ;;
@@ -54,7 +49,6 @@ processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
 (if (string= system-name "plantsci-cowin01")
 	(setq initial-scratch-message
 		  "The most exciting phrase to hear in science, the one that heralds the most discoveries, is\nnot 'Eureka! (I found it!), but 'That's funny...'\n\nIsaac Asimov"))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual configuration
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -62,7 +56,6 @@ processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
 (tool-bar-mode 0)			; Turn off tool bar
 (blink-cursor-mode 0)			; Turn off blinking cursor
 (scroll-bar-mode 0)			; We don't need a scroll bar
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Activate a colour theme
 ;;
@@ -73,7 +66,6 @@ processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
 (add-to-list 'load-path "~/emacsExtRepos/emacs-material-theme")
 (require 'material-theme)
 (load-theme 'material t)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Rainbow delimeters
 ;;
@@ -86,19 +78,15 @@ processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'LaTeX-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'text-mode-hook 'rainbow-delimiters-mode)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Turn on outline-minor-mode for various modes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-hook 'LaTeX-mode-hook 'outline-minor-mode)
 (add-hook 'prog-mode-hook 'outline-minor-mode)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Turn on global line numbering at the start of the line.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-linum-mode t)
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Minimap mode
 ;;
@@ -108,7 +96,6 @@ processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/minimap")
 (require 'minimap)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual fill column (dependency for writeroom mode)
 ;;
@@ -118,7 +105,6 @@ processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/visual-fill-column")
 (require 'visual-fill-column)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Writeroom mode
 ;;
@@ -128,7 +114,6 @@ processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/emacsExtRepos/writeroom-mode")
 (require 'writeroom-mode)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Highlight the current line to help focus the eyes (using the
 ;; built-in hl-line-mode). Instructions on doing this were found here:
@@ -138,7 +123,6 @@ processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
 ;; works it doesn't require any extra libraries.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-hl-line-mode 1)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Zone Mode - a sort of screen saver
 ;;
@@ -146,7 +130,6 @@ processor.\n\nNeal Stephenson - \n\tIn The Beginning...was the Command Line"))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'zone)
 (zone-when-idle 120)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Very silly - but this is NyanCat mode
 ;;
