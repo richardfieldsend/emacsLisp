@@ -1,5 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Time-stamp: "2018-06-13 17:16:01 richard"
+;; Time-stamp: "2018-03-02 23:11:35 rf343"
 ;;   ___ _ __ ___   __ _  ___ ___
 ;;  / _ \ '_ ` _ \ / _` |/ __/ __|
 ;; |  __/ | | | | | (_| | (__\__ \
@@ -264,19 +265,14 @@
 (setq auto-mode-alist
 	  (cons '("\\.\\(xml\\|xsl\\|rng\\|xhtml\\|html\\)\\'" .nxml-mode)
 			auto-mode-alist))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; turn off frame stuff
+;; Useful frame titling.
 ;;
-;; As described in a reddit post
+;; Part of babcore customisation list as found here:
+;; http://www.draketo.de/light/english/emacs/babcore#orgheadline8
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (toggle-frame-fullscreen)
-;;
-;; I have commented this out because this switch forces full screen
-;; which means that Emacs doesn't share space with anything else! Not
-;; having the frame was nice, but if you want to have anything else on
-;; screen it doesn't work.  You can always toggle this using M-x
-;; toggle-frame-fullscreen.
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+<<<<<<< HEAD
 ;; Adding some stuff taken from Sascha Chua's emacs configuration.
 ;;
 ;; Personal stuff (name)
@@ -291,3 +287,8 @@
 ;; Display a compact modeline
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (use-package smart-mode-line)
+=======
+;; Set the frame title as by http://www.emacswiki.org/emacs/FrameTitle
+(setq frame-title-format (list "%b ☺ " (user-login-name) "@" (system-name) "%[ - GNU %F " emacs-version)
+      icon-title-format (list "%b ☻ " (user-login-name) "@" (system-name) " - GNU %F " emacs-version))
+
