@@ -1,5 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Time-stamp: "2018-06-13 17:16:01 richard"
+;; Time-stamp: "2018-06-20 17:09:31 richard"
 ;; Time-stamp: "2018-03-02 23:11:35 rf343"
 ;;   ___ _ __ ___   __ _  ___ ___
 ;;  / _ \ '_ ` _ \ / _` |/ __/ __|
@@ -272,7 +272,6 @@
 ;; Part of babcore customisation list as found here:
 ;; http://www.draketo.de/light/english/emacs/babcore#orgheadline8
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
 ;; Adding some stuff taken from Sascha Chua's emacs configuration.
 ;;
 ;; Personal stuff (name)
@@ -283,12 +282,6 @@
 ;; Put the time on the modeline
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (display-time-mode 1)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Display a compact modeline
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(use-package smart-mode-line)
-=======
 ;; Set the frame title as by http://www.emacswiki.org/emacs/FrameTitle
 (setq frame-title-format (list "%b ☺ " (user-login-name) "@" (system-name) "%[ - GNU %F " emacs-version)
       icon-title-format (list "%b ☻ " (user-login-name) "@" (system-name) " - GNU %F " emacs-version))
-
